@@ -39,7 +39,7 @@ function secondsUntil(date) {
 
 }
 
-function eventCounter(seconds, event) {
+function eventCounter(seconds, event, count) {
     // Takes a count of seconds and outputs days, hours, minutes, seconds
 
     var days = Math.floor(seconds / 86400); // 860400 sec in one day
@@ -51,7 +51,9 @@ function eventCounter(seconds, event) {
     var mins = Math.floor(secs / 60);
     secs = secs - (mins * 60);
 
-    var eventPhrase = "<br>" + "<p class='eventPhase'>" + "There are " + days + " days " + hours + " hrs " + mins + " min and " + secs + " secs until " + event + "</p>";
+    /*var eventPhrase = "<br>" + "<p class='eventPhase'>" + "There are " + days + " days " + hours + " hrs " + mins + " min and " + secs + " secs until " + event + "</p>"; */
+
+    var eventPhrase = `<br><p id='event${count}'>There are ${days} days, ${hours} hrs, ${mins} mins, and ${secs} seconds until ${event}.`
 
     return eventPhrase;
 
@@ -60,7 +62,7 @@ function eventCounter(seconds, event) {
 function updateMsg(message) {
     // Seconds countdown
 
-    return document.getElementById("timer").innerHTML += message;
+    return document.getElementById("timer").innerHTML = message;
 
 }
 

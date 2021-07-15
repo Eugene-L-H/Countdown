@@ -43,7 +43,7 @@ nav ul li {
     
 }
 
-.eventPhase {
+#timer {
     margin-left: 10%;
     font-weight: bold;
     font-size: 2em;
