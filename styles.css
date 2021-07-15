@@ -1,0 +1,51 @@
+body.countdown {
+
+    background-color: rgb(225, 225, 225);
+    padding: 0 15%;
+
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2.4rem;
+}
+
+.description {
+    max-width: 50%;
+    margin-top: 2.5rem;
+}
+
+.description p {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    padding-right: 15%;
+    
+}
+
+.input {
+    padding: 1em;
+}
+
+.submit {
+    padding: 1em;
+    position: relative;
+    
+}
+
+.eventPhase {
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: 2em;
+}
+
