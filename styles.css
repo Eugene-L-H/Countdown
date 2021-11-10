@@ -1,51 +1,70 @@
-body.countdown {
+html,
+body {
+  margin: 0;
+  min-width: 100%;
+}
 
-    background-color: rgb(225, 225, 225);
-    padding: 0 15%;
+.countdown {
+  background-color: rgb(225, 225, 225);
+}
 
+header {
+  display: flex;
+  width: 100%;
+  background-color: #001f3f;
+  margin: 0;
 }
 
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: oblique;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 2.4rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #74bfff;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  margin: 2.4rem 0 1.5rem 0;
+  padding-left: 5%;
+}
+
+main {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
 }
 
 .description {
-    max-width: 50%;
-    margin-top: 2.5rem;
+  max-width: 50%;
+  margin-top: 2.5rem;
 }
 
 .description p {
-    text-align: center;
+  text-align: center;
 }
 
 nav {
-    text-align: right;
+  text-align: right;
 }
 
 nav ul li {
-    display: flex;
-    justify-content: center;
-    padding-right: 15%;
-    
+  display: flex;
+  justify-content: center;
+  padding-right: 15%;
 }
 
 .input {
-    padding: 1em;
+  padding: 1em;
 }
 
 .submit {
-    padding: 1em;
-    position: relative;
-    
+  padding: 1em;
+  position: relative;
 }
 
 #timer {
-    margin-left: 10%;
-    font-weight: bold;
-    font-size: 2em;
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 2em;
 }
-

@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
     <title>Countdown</title>
-</head>
+  </head>
 
-<body class="countdown">
-    <h1>Event Countdown</h1>
+  <body class="countdown">
+    <header>
+      <h1>Event Countdown</h1>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-        </ul>
-    </nav>
+    <main>
+      <div class="box">
 
-    <div class="description">
-        <p>How many days, hours, minutes and seconds until your event? Enter the
-        nameof your event you are looking forward to and a countdown of days,
-        hours, minutes and seconds will be displayed!</p>
-    </div>
+        <div class="description">
+          <p>How many days, hours, minutes and seconds until your event?</p>
+          <p>
+            Enter the name of your event you are looking forward to and a
+            countdown of days, hours, minutes and seconds will be displayed!
+          </p>
+        </div>
 
-    <div id="eventForm">
-        <form method="get" >
-
+        <div id="eventForm">
+          <form method="get">
             <div class="input">
-                <label for="feventID">Event Name:</label>
-                <input type="text" id="feventID" name="eventID" placeholder="Deadline"
-                value="Deadline"><br>
+              <label for="feventID">Event Name:</label>
+              <input
+                type="text"
+                id="feventID"
+                name="eventID"
+                placeholder="Deadline"
+                value="Deadline"
+              />
             </div>
-
             <div class="input">
-                <label for="fdate">Enter Date of Event:</label>
-                <input type="date" id="fdate" name="date" value="2022-04-15"><br>
+              <label for="fdate">Enter Date of Event:</label>
+              <input
+                type="date"
+                id="fdate"
+                name="date"
+                value="2022-04-15"
+              /><br />
             </div>
-
             <div class="input">
-                <label for="ftime">Enter Time of Event:</label>
-                <input type="time" id="ftime" value="17:00" name="time"><br>
+              <label for="ftime">Enter Time of Event:</label>
+              <input type="time" id="ftime" value="17:00" name="time" /><br />
             </div>
-
             <div class="submit">
-                <input type="button" id="fsubmit" value="Submit"
-            ">
-            </div>
-            
-        </form>
-    </div>
-
-    <div id="timer">
-    </div>
+              <input type="button" value="Submit" id="fsubmit" />
+            </form>  
+          </div>
+      </div>
+      <!-- <div id="timer"></div> -->
+      <ul id="timers">
+      </ul>
+    </main>
 
     <script type="text/javascript" src="scripts/functions.js "></script>
     <script type="text/javascript" src="scripts/scripts.js"></script>
-</body>
-
+  </body>
 </html>
