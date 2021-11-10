@@ -1,24 +1,22 @@
-document.getElementById("fsubmit").addEventListener('click', makeEvent);
+document.getElementById("fsubmit").addEventListener("click", makeEvent);
 
-var count = 0; // Number of events submitted my user
+let count = 0; // Number of events submitted my user
 
 function makeEvent() {
+  count++;
 
-    count++;
+  let eventName = futureEvent();
 
-    function iterate() {
+  addListItem(eventName);
 
-        var eventName = futureEvent();
+  let seconds = secondsUntil(futureDate());
 
-        var seconds = secondsUntil(futureDate());
+  function iterate() {
+    seconds--;
+    let display = eventCounter(seconds, eventName, count);
 
-        var display = eventCounter(seconds, eventName, count);
+    updateMsg(display, eventName);
+  }
 
-        updateMsg(display);
-
-    };
-
-    setInterval(iterate, 1000);
-
+  setInterval(iterate, 1000);
 }
-

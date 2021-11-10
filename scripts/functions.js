@@ -1,18 +1,18 @@
 function futureEvent() {
   // Retrieve name of event entered by user
-  var eventName = document.getElementById("feventID").value;
+  let eventName = document.getElementById("feventID").value;
 
   return eventName;
 }
 
 function futureDate() {
   // Retrieve information from form for new event
-  var fDate = {};
+  let fDate = {};
   fDate["date"] = document.getElementById("fdate").value;
   fDate["time"] = document.getElementById("ftime").value;
 
-  var localDate = fDate["date"] + ":" + fDate["time"];
-  var eventDate = new Date(localDate).toUTCString();
+  let localDate = fDate["date"] + ":" + fDate["time"];
+  let eventDate = new Date(localDate).toUTCString();
 
   return eventDate;
 }
@@ -20,16 +20,16 @@ function futureDate() {
 function secondsUntil(date) {
   // Date object passed from futureDate()
 
-  var eventDate = new Date(date).getTime(); // Convert to milliseconds
+  let eventDate = new Date(date).getTime(); // Convert to milliseconds
 
-  var cdUTC = new Date().toUTCString(); // Convert current date to UTC
-  var currentDate = new Date(cdUTC).getTime();
+  let cdUTC = new Date().toUTCString(); // Convert current date to UTC
+  let currentDate = new Date(cdUTC).getTime();
 
   // Convert milliseconds to seconds
-  var s1 = eventDate / 1000;
-  var s2 = currentDate / 1000;
+  let s1 = eventDate / 1000;
+  let s2 = currentDate / 1000;
 
-  var secondsLeft = s1 - s2;
+  let secondsLeft = s1 - s2;
 
   return secondsLeft;
 }
@@ -37,24 +37,31 @@ function secondsUntil(date) {
 function eventCounter(seconds, event, count) {
   // Takes a count of seconds and outputs days, hours, minutes, seconds
 
-  var days = Math.floor(seconds / 86400); // 860400 sec in one day
-  var secs = seconds - days * 86400;
+  let days = Math.floor(seconds / 86400); // 860400 sec in one day
+  let secs = seconds - days * 86400;
 
-  var hours = Math.floor(secs / 3600);
+  let hours = Math.floor(secs / 3600);
   secs = secs - hours * 3600;
 
-  var mins = Math.floor(secs / 60);
+  let mins = Math.floor(secs / 60);
   secs = secs - mins * 60;
 
   /*var eventPhrase = "<br>" + "<p class='eventPhase'>" + "There are " + days + " days " + hours + " hrs " + mins + " min and " + secs + " secs until " + event + "</p>"; */
 
-  var eventPhrase = `<br><p id='event${count}'>There are ${days} days, ${hours} hrs, ${mins} mins, and ${secs} seconds until ${event}.`;
+  let eventPhrase = `<p>There are <b>${days}</b> days, <b>${hours}</b> <i>hrs</i>, <b>${mins}</b> <i>mins</i>, and <b>${secs}</b> <i>seconds</i> until <b><i>${event}</i></b>.</p>`;
 
   return eventPhrase;
 }
 
-function updateMsg(message) {
-  // Seconds countdown
-
-  return (document.getElementById("timer").innerHTML = message);
+function addListItem(eventName) {
+  let listItem = document.createElement("li");
+  listItem.setAttribute("id", `${eventName}`);
+  document.getElementById("timers").append(listItem);
 }
+
+function updateMsg(message, eventName) {
+  // Seconds countdown
+  return (document.getElementById(eventName).innerHTML = message);
+}
+
+class Event {}
