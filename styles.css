@@ -1,11 +1,11 @@
 html,
 body {
   margin: 0;
-  min-width: 100%;
-}
-
-body {
-  background-color: rgb(225, 225, 225);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(238, 243, 245);
+  height: 100vh;
 }
 
 header {
@@ -23,38 +23,42 @@ h1 {
   font-weight: bold;
   text-align: center;
   margin: 2.4rem 0 1.5rem 0;
-  padding-left: 5%;
+  padding-left: 70px;
 }
 
-.page-container {
-  min-height: 100vh;
+.middle {
+  display: flex;
+  height: 100%;
 }
 
 main {
   display: flex;
-  flex-direction: row;
+  gap: 60px;
+  width: 100%;
+  margin-bottom: auto;
 }
 
-.box {
+.sidebar {
+  width: 150px;
+  background-color: #10385f;
+  border-right: #74bfff solid 3px;
+}
+
+.form-box {
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  max-width: 40%;
-  margin-top: 2.5rem;
+  justify-content: center;
+  max-width: 500px;
+  min-height: 400px;
+  margin: 40px 40px 0 40px;
+  padding: 0 10px 0 25px;
+  border: solid 1px #aaa;
 }
 
 .description p {
   text-align: left;
 }
-
-/* nav {
-  text-align: right;
-}
-
-nav ul li {
-  display: flex;
-  justify-content: center;
-  padding-right: 15%;
-} */
 
 .input {
   padding: 1em;
@@ -65,10 +69,19 @@ nav ul li {
   position: relative;
 }
 
-#timer {
-  margin-left: 10%;
-  font-weight: bold;
-  font-size: 2em;
+.timer-box {
+  position: relative;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+#timers {
+  list-style-type: none;
+}
+
+#timers li {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -76,4 +89,6 @@ footer {
   justify-content: center;
   font-weight: 300;
   font-size: 15px;
+  /* margin-top: auto; */
+  border-top: #74bfff 2px solid;
 }

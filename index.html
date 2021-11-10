@@ -9,69 +9,60 @@
   </head>
 
   <body>
-    <div class="page-container">
-      <header>
-        <h1>Event Countdown</h1>
-      </header>
-
-      <div class="page-container">
-        <main>
-          <div class="box">
-            <div class="description">
-              <p>How many days, hours, minutes and seconds until your event?</p>
-              <p>
-                Enter the name of your event you are looking forward to and a
-                countdown of days, hours, minutes and seconds will be displayed!
-              </p>
-            </div>
-            <div id="eventForm">
-              <form method="get">
-                <div class="input">
-                  <label for="feventID">Event Name:</label>
-                  <input
-                    type="text"
-                    id="feventID"
-                    name="eventID"
-                    placeholder="Deadline"
-                    value="Deadline"
-                  />
-                </div>
-                <div class="input">
-                  <label for="fdate">Enter Date of Event:</label>
-                  <input
-                    type="date"
-                    id="fdate"
-                    name="date"
-                    value="2022-04-15"
-                  /><br />
-                </div>
-                <div class="input">
-                  <label for="ftime">Enter Time of Event:</label>
-                  <input
-                    type="time"
-                    id="ftime"
-                    value="17:00"
-                    name="time"
-                  /><br />
-                </div>
-                <div class="submit">
-                  <input type="button" value="Submit" id="fsubmit" />
-                </div>
-              </form>
-            </div>
+    <header>
+      <h1>Event Countdown</h1>
+    </header>
+    <div class="middle">
+      <div class="sidebar"></div>
+      <main>
+        <div class="form-box">
+          <div class="description">
+            <p>How many days, hours, minutes and seconds until your event?</p>
+            <p>
+              Enter the name of your event you are looking forward to and a
+              countdown of days, hours, minutes and seconds will be displayed!
+            </p>
           </div>
-          <!-- <div id="timer"></div> -->
-          <div>
-            ""
-            <ul id="timers"></ul>
+          <div id="eventForm">
+            <form method="get">
+              <div class="input">
+                <label for="feventID">Event Name:</label>
+                <input
+                  type="text"
+                  id="feventID"
+                  name="eventID"
+                  placeholder="Deadline"
+                  value="Deadline"
+                />
+              </div>
+              <div class="input">
+                <label for="fdate">Enter Date of Event:</label>
+                <input
+                  type="date"
+                  id="fdate"
+                  name="date"
+                  value="2022-04-15"
+                /><br />
+              </div>
+              <div class="input">
+                <label for="ftime">Enter Time of Event:</label>
+                <input type="time" id="ftime" value="17:00" name="time" /><br />
+              </div>
+              <div class="submit">
+                <input type="button" value="Submit" id="fsubmit" />
+              </div>
+            </form>
           </div>
-        </main>
-      </div>
-
-      <footer>
-        <p><i>A project developed by Eugene</i> - 2021</p>
-      </footer>
+        </div>
+        <!-- <div id="timer"></div> -->
+        <div class="timer-box">
+          <ul id="timers"></ul>
+        </div>
+      </main>
     </div>
+    <footer>
+      <p><i>A project developed by Eugene</i> - 2021</p>
+    </footer>
     <script type="text/javascript" src="scripts/functions.js "></script>
     <script type="text/javascript" src="scripts/scripts.js"></script>
   </body>
