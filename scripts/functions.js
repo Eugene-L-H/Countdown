@@ -34,7 +34,7 @@ function secondsUntil(date) {
   return secondsLeft;
 }
 
-function eventCounter(seconds, event, count) {
+function eventCounter(seconds, event) {
   // Takes a count of seconds and outputs days, hours, minutes, seconds
 
   let days = Math.floor(seconds / 86400); // 860400 sec in one day
@@ -64,4 +64,6 @@ function updateMsg(message, eventName) {
   return (document.getElementById(eventName).innerHTML = message);
 }
 
-class Event {}
+class Event {
+  constructor() {}
+}

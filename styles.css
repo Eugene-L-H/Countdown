@@ -4,7 +4,7 @@ body {
   min-width: 100%;
 }
 
-.countdown {
+body {
   background-color: rgb(225, 225, 225);
 }
 
@@ -26,25 +26,27 @@ h1 {
   padding-left: 5%;
 }
 
+.page-container {
+  min-height: 100vh;
+}
+
 main {
   display: flex;
+  flex-direction: row;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-}
-
-.description {
-  max-width: 50%;
+  max-width: 40%;
   margin-top: 2.5rem;
 }
 
 .description p {
-  text-align: center;
+  text-align: left;
 }
 
-nav {
+/* nav {
   text-align: right;
 }
 
@@ -52,7 +54,7 @@ nav ul li {
   display: flex;
   justify-content: center;
   padding-right: 15%;
-}
+} */
 
 .input {
   padding: 1em;
@@ -67,4 +69,11 @@ nav ul li {
   margin-left: 10%;
   font-weight: bold;
   font-size: 2em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 15px;
 }
