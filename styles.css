@@ -46,7 +46,7 @@ main {
 .left-content_MAIN {
   max-width: 500px;
   min-height: 400px;
-  margin: 40px 60px 0 auto;
+  margin: 40px 40px 0 auto;
 }
 
 .right-content_MAIN {
@@ -97,10 +97,15 @@ main {
 
 .submit {
   position: relative;
+  padding-top: 10px;
 }
 
 .submit input {
-  padding: 8px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: solid black 1.5px;
+  background-color: rgba(223, 121, 121, 0.616);
+  padding: 7px 14px;
 }
 
 #timers {
