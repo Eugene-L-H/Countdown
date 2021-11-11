@@ -55,7 +55,6 @@ function eventCounter(seconds, eventName) {
 function addListItem(className) {
   let listItem = document.createElement("li");
   listItem.setAttribute("class", `${className}`);
-  console.log(listItem);
   document.getElementById("timers").append(listItem);
 }
 
