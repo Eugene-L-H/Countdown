@@ -65,8 +65,11 @@ main {
 }
 
 .submit {
-  padding: 1em;
   position: relative;
+}
+
+.submit input {
+  padding: 8px;
 }
 
 .timer-box {
