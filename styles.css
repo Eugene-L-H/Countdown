@@ -31,17 +31,36 @@ h1 {
   height: 100%;
 }
 
-main {
-  display: flex;
-  gap: 60px;
-  width: 100%;
-  margin-bottom: auto;
-}
-
 .sidebar {
   width: 150px;
   background-color: #10385f;
   border-right: #74bfff solid 3px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.left-content_MAIN {
+  max-width: 500px;
+  min-height: 400px;
+  margin: 40px 60px 0 auto;
+}
+
+.right-content_MAIN {
+  position: relative;
+  margin: 20px auto 0 0;
+  width: 600px;
+}
+
+.description {
+  padding: 0 0 24px 15px;
+}
+
+.instruction {
+  font-style: italic;
 }
 
 .form-box {
@@ -50,18 +69,30 @@ main {
   flex-direction: column;
   justify-content: center;
   max-width: 500px;
-  min-height: 400px;
-  margin: 40px 40px 0 40px;
-  padding: 0 10px 0 25px;
+  min-height: 250px;
+  padding: 0;
   border: solid 1px #aaa;
 }
 
-.description p {
-  text-align: left;
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input {
-  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  padding: 16px;
+}
+
+.input :nth-child(1) {
+  padding-right: 45px;
+}
+
+.input input {
+  width: 250px;
 }
 
 .submit {
@@ -70,12 +101,6 @@ main {
 
 .submit input {
   padding: 8px;
-}
-
-.timer-box {
-  position: relative;
-  margin-top: 20px;
-  max-width: 600px;
 }
 
 #timers {
@@ -92,6 +117,7 @@ footer {
   justify-content: center;
   font-weight: 300;
   font-size: 15px;
-  /* margin-top: auto; */
+  color: #001f3f;
+  background-color: lightblue;
   border-top: #74bfff 2px solid;
 }

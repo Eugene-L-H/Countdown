@@ -47,7 +47,7 @@ function eventCounter(seconds, eventName) {
   secs = secs - mins * 60;
 
   // This will be the countdown message displayed to the user.
-  let eventPhrase = `<p><b>-</b> There are <b>${days}</b> days, <b>${hours}</b> <i>hrs</i>, <b>${mins}</b> <i>mins</i>, and <b>${secs}</b> <i>seconds</i> until <b><i>${eventName}</i></b>.</p>`;
+  let eventPhrase = `<p><b>-</b> There are <b>${days}</b> days, <b>${hours}</b> <i>hrs</i>, <b>${mins}</b> <i>mins</i>, and <b>${secs}</b> <i>seconds</i> until <b><i>${eventName}</i></b></p>`;
 
   return eventPhrase;
 }
