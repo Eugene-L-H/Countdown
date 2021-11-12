@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="scripts/functions.js " defer></script>
+    <script type="text/javascript" src="scripts/scripts.js" defer></script>
     <title>Countdown</title>
   </head>
 
@@ -17,22 +19,21 @@
       <main>
         <div class="left-content_MAIN">
           <div class="description">
-            <p>How many days, hours, minutes and seconds until your event?</p>
-            <p class="instruction">
-              Enter the name of your event you are looking forward to and a
-              countdown of days, hours, minutes and seconds will be displayed!
+            <p>Enter the name of an event that you are looking forward to.</p>
+            <p>
+              A countdown of days, hours, minutes and seconds will be displayed!
             </p>
           </div>
           <div class="form-box">
-            <form method="get">
+            <form id="form-field" method="get" onsubmit="return false">
               <div class="input">
-                <label for="feventID">Event Name:</label>
+                <label>Event Name:</label>
                 <input
                   type="text"
                   id="feventID"
                   name="eventID"
-                  placeholder="Deadline"
-                  value="Deadline"
+                  autocomplete="off"
+                  value="New Years Eve"
                 />
               </div>
               <div class="input">
@@ -41,15 +42,15 @@
                   type="date"
                   id="fdate"
                   name="date"
-                  value="2022-04-15"
+                  value="2022-12-31"
                 /><br />
               </div>
               <div class="input">
                 <label for="ftime">Enter Time of Event:</label>
-                <input type="time" id="ftime" value="17:00" name="time" /><br />
+                <input type="time" id="ftime" name="time" value="00:00"/><br />
               </div>
               <div class="submit">
-                <input type="button" value="Submit" id="fsubmit" />
+                <input type="submit" value="Submit" id="fsubmit" />
               </div>
             </form>
           </div>
@@ -61,9 +62,7 @@
       </main>
     </div>
     <footer>
-      <p><i>A project developed by Eugene</i>&nbsp; <b>2021</b></p>
+      <p><i>A project developed by Eugene <b>2021</b></p>
     </footer>
-    <script type="text/javascript" src="scripts/functions.js "></script>
-    <script type="text/javascript" src="scripts/scripts.js"></script>
   </body>
 </html>

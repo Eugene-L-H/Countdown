@@ -1,7 +1,6 @@
 function futureEventName() {
   // Retrieve name of event entered by user.
   let eventName = document.getElementById("feventID").value;
-
   return eventName;
 }
 
@@ -35,7 +34,8 @@ function secondsUntil(futureDate) {
 }
 
 function eventCounter(seconds, eventName) {
-  // Takes a count of seconds and outputs days, hours, minutes, seconds.
+  // Takes a count of seconds and outputs a message that displays days, hours,
+  // minutes, and seconds until event.
 
   let days = Math.floor(seconds / 86400); // 860400 sec in one day.
   let secs = seconds - days * 86400;
@@ -53,12 +53,16 @@ function eventCounter(seconds, eventName) {
 }
 
 function addListItem(className) {
+  // Insert a list-item into the #timers un-ordered list with a unique class
+  // name that can be targeted.
+
   let listItem = document.createElement("li");
   listItem.setAttribute("class", `${className}`);
+  // Add empty list-item to #timers list.
   document.getElementById("timers").append(listItem);
 }
 
 function updateMsg(message, className) {
-  // Seconds countdown
+  // Insert or replace message inside list item.
   return (document.querySelector(`.${className}`).innerHTML = message);
 }

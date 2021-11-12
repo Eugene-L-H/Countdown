@@ -101,6 +101,7 @@ main {
 }
 
 .submit input {
+  font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
   border: solid black 1.5px;
