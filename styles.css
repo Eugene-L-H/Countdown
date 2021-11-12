@@ -64,13 +64,12 @@ main {
 }
 
 .form-box {
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 500px;
   min-height: 250px;
-  padding: 0;
+  padding-bottom: 24px;
   border: solid 1px #aaa;
 }
 
@@ -78,6 +77,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.error {
+  font-size: 12px;
+  margin: 20px 50px 0 auto;
+  color: red;
 }
 
 .input {
@@ -130,4 +135,9 @@ footer {
   color: #001f3f;
   background-color: lightblue;
   border-top: #74bfff 2px solid;
+}
+
+/* resusable classes */
+.hidden {
+  visibility: hidden;
 }

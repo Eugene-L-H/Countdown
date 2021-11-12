@@ -1,13 +1,6 @@
 document.getElementById("fsubmit").addEventListener("click", makeEvent);
 
-const eventUserInput = document.getElementById("feventID");
-const submitButton = document.getElementById("fsubmit");
-
-eventUserInput.addEventListener("keydown", (e) => {
-  if (e == 13) {
-    submitButton.click();
-  }
-});
+const errorMsg = document.getElementsByClassName("error")[0];
 
 count = 0; // Increments by one for each className added to classNames.
 let eventNames = [];
@@ -33,7 +26,8 @@ function makeEvent() {
   if (count > 0) {
     for (let i = 0; i < classNames.length; i++) {
       if (eventName == eventNames[i]) {
-        return 1;
+        errorMsg.classList.remove("hidden");
+        return;
       }
       if (className == classNames[i]) {
         className = className + count;
@@ -41,6 +35,9 @@ function makeEvent() {
     }
   }
   count++; // Plus one to count for each className added to classNames.
+
+  // If eventName is unique there is no error. Error msg can be hidden.
+  errorMsg.classList.add("hidden");
 
   // Register current eventName in list of eventNames.
   eventNames.push(eventName);
