@@ -47,11 +47,15 @@ function makeEvent() {
   addListItem(className);
 
   let seconds = secondsUntil(futureDate());
+
   // Subtract one from seconds variable and update displayed message.
+  let eventPhrase = eventCounter(seconds);
+  updateMsg(eventPhrase, className, eventName);
+
   function iterate() {
     seconds--;
-    let display = eventCounter(seconds, eventName);
-    updateMsg(display, className);
+    eventPhrase = eventCounter(seconds);
+    updateMsg(eventPhrase, className, eventName);
   }
 
   setInterval(iterate, 1000);

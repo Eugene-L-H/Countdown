@@ -125,6 +125,11 @@ main {
 #timers li {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#timers span {
+  font-weight: b;
 }
 
 footer {
