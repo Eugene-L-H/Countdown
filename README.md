@@ -20,7 +20,7 @@ Countdown can be run from https://eugene-l-h.github.io/Countdown/ or by
 downloading the files and opening the index.html file in the browser of your
 choice. 
 
-# This project was developed and tested in Google Chrome on screen resolutions of
+This project was developed and tested in Google Chrome on screen resolutions of
 1920x1080 and 1366x768. 
 
 # Notes
