@@ -3,7 +3,11 @@ function getFutureEventName() {
   let eventName = document.getElementById("futureEventName").value;
 
   // Event name must start with a char as if will be used as a class.
-  if (!(/[a-zA-Z]/).test(eventName[0])) return;
+  if (!(/[a-zA-Z]/).test(eventName[0])) {
+    errorMessage.textContent = 'Must start with a letter.';
+    errorMessage.classList.remove('hidden');
+    return;
+  }
 
   return eventName;
 }
