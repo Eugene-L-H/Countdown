@@ -25,23 +25,24 @@
             </p>
           </div>
           <div class="form-box">
-            <p class="error hidden">That event has already been registered.</p>
+            <p class="error hidden"></p>
             <form id="form-field" method="get" onsubmit="return false">
               <div class="input">
                 <label>Event Name:</label>
                 <input
                   type="text"
-                  id="feventID"
+                  id="futureEventName"
                   name="eventID"
                   autocomplete="off"
-                  value="New Years Eve"
+                  placeholder="New Years"
+                  maxlength="24"
                 />
               </div>
               <div class="input">
-                <label for="fdate">Enter Date of Event:</label>
+                <label for="futureEventDate">Enter Date of Event:</label>
                 <input
                   type="date"
-                  id="fdate"
+                  id="futureEventDate"
                   name="date"
                   value="2022-12-31"
                 /><br />

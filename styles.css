@@ -67,9 +67,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   max-width: 500px;
   min-height: 250px;
-  padding-bottom: 24px;
+  padding: 12px 0;
   border: solid 1px #aaa;
 }
 
@@ -80,9 +81,13 @@ main {
 }
 
 .error {
+  position: absolute;
+  text-align: center;
+  font-style: italic;
   font-size: 12px;
   margin: 20px 50px 0 auto;
   color: red;
+  margin: 0 0 205px 170px;
 }
 
 .input {
@@ -90,6 +95,10 @@ main {
   justify-content: space-between;
   width: 450px;
   padding: 16px;
+}
+
+#futureEventName {
+  margin-right: 7px;
 }
 
 .input :nth-child(1) {

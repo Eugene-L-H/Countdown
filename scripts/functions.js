@@ -1,39 +1,43 @@
-function futureEventName() {
+function getFutureEventName() {
   // Retrieve name of event entered by user.
-  let eventName = document.getElementById("feventID").value;
+  let eventName = document.getElementById("futureEventName").value;
+
+  // Event name must start with a char as if will be used as a class.
+  if (!(/[a-zA-Z]/).test(eventName[0])) return;
+
   return eventName;
 }
 
-function futureDate() {
+function getFutureDate() {
   // Retrieve information from form for new event.
-  let fDate = {};
-  fDate["date"] = document.getElementById("fdate").value;
-  fDate["time"] = document.getElementById("ftime").value;
+  let futureEventDate = {};
+  futureEventDate["date"] = document.getElementById("futureEventDate").value;
+  futureEventDate["time"] = document.getElementById("ftime").value;
 
-  let localDate = fDate["date"] + ":" + fDate["time"];
+  let localDate = futureEventDate["date"] + ":" + futureEventDate["time"];
   let futureDate = new Date(localDate).toUTCString();
 
   return futureDate;
 }
 
-function secondsUntil(futureDate) {
+function getSecondsUntilEvent(futureDate) {
   // Date object passed from futureDate().
 
   let eventDate = new Date(futureDate).getTime(); // Convert to milliseconds.
 
-  let cdUTC = new Date().toUTCString(); // Convert current date to UTC.
-  let currentDate = new Date(cdUTC).getTime();
+  let convertDateToUTC = new Date().toUTCString(); // Convert current date to UTC.
+  let currentDate = new Date(convertDateToUTC).getTime();
 
   // Convert milliseconds to seconds
-  let s1 = eventDate / 1000;
-  let s2 = currentDate / 1000;
+  let secondsUntilEvent = eventDate / 1000;
+  let currentDateInSeconds = currentDate / 1000;
 
-  let secondsLeft = s1 - s2;
+  let secondsLeft = secondsUntilEvent - currentDateInSeconds;
 
   return secondsLeft;
 }
 
-function eventCounter(seconds) {
+function displaySecondsCountdown(seconds) {
   // Takes a count of seconds and outputs a message that displays days, hours,
   // minutes, and seconds until event.
 
@@ -62,7 +66,7 @@ function addListItem(className) {
   document.getElementById("timers").append(listItem);
 }
 
-function updateMsg(eventPhrase, className, eventName) {
+function updateMessage(eventPhrase, className, eventName) {
   // Insert or replace message inside list item.
 
   const newLine = document.querySelector(`.${className}`);
