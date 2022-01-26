@@ -1,5 +1,5 @@
 # Countdown
-Webapp that produces a real-time coundown of seconds, minutes, hours and days for each
+Webapp that produces a real-time countdown of seconds, minutes, hours and days for each
 event registered by the user.
 
 # Description
@@ -7,7 +7,7 @@ A web page displaying a form with 3 fields. Asks the user to enter the name,
 date and time of an event that they are looking forward to. Once entered a
 countdown for that event will be displayed on the page.
 
-# Instructons
+# Instructions
 The user will enter an event name up to 24 characters long in the top input of
 the form.
 
