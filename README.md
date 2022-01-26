@@ -1,5 +1,5 @@
 # Countdown
-Webapp that produces a real-time countdown of seconds, minutes, hours and days for each
+A web app that produces a real-time countdown of seconds, minutes, hours and days for each
 event registered by the user.
 
 # Description
